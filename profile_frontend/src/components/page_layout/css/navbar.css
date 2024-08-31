@@ -1,0 +1,121 @@
+/* Styling for the dropdown items in the navbar */
+.navbar .dropdown-menu .dropdown-item:hover {
+  background-color: gold;
+  color: black;
+}
+
+.header {
+  box-shadow: 0 30px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom search button styling */
+.search-container {
+  position: relative;
+}
+
+.search-input {
+  width: 100%; /* Full width for responsiveness */
+  padding: 10px 40px 10px 10px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 10px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px; /* Adjust as needed to fit your design */
+  top: 50%;
+  transform: translateY(-50%);
+  color: gold;
+  font-size: 20px; /* Adjust size as needed */
+}
+
+.suggestion-item:hover {
+  background-color: #333;
+}
+
+.custom-search-button:hover {
+  color: white;
+  background-color: goldenrod;
+  border-color: #feb47b;
+}
+
+/* Search input field styling */
+.search-input {
+  height: 30px;
+  width: 100%; /* Full width for responsiveness */
+  color: goldenrod;
+  background-color: #303032;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.search-input::placeholder {
+  color: white;
+}
+
+/* Navbar link styling */
+.nav-link {
+  border-bottom: 1px solid white;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+}
+
+.nav-link.active {
+  border-bottom: 2px solid green;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid green;
+  font-size: large;
+  color: gold; /* Example hover effect */
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .navbar .dropdown-menu .dropdown-item {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+  
+  .search-input {
+    width: 100%; /* Full width on smaller devices */
+  }
+
+  .search-icon {
+    font-size: 18px; /* Adjust icon size for smaller screens */
+  }
+
+  .nav-link {
+    margin-right: 5px; /* Reduced margin for smaller screens */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .navbar .dropdown-menu {
+    width: 100%; /* Ensure dropdown takes full width on mobile */
+  }
+
+  .search-container {
+    width: 100%; /* Full width search container */
+  }
+
+  .search-input {
+    height: 40px; /* Adjust height for better touch support */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .search-icon {
+    font-size: 16px; /* Smaller icon size for mobile screens */
+  }
+
+  .nav-link {
+    display: block; /* Stack navbar links vertically */
+    margin-right: 0; /* Remove right margin */
+    text-align: center; /* Center-align text for better readability */
+  }
+}

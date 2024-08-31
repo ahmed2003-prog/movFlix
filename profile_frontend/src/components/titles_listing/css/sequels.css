@@ -1,0 +1,213 @@
+/* Sequels Container Styling */
+.sequels-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+    gap: 16px; /* Gap between cards */
+    justify-content: center;
+    padding: 16px;
+}
+
+/* Movies Sequels Header Styling */
+.movies-sequels-h3 {
+    padding: 20px;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    color: white;
+    margin-left: 15px;
+    width: 90%;
+    cursor: pointer; /* Indicate clickable area */
+}
+
+/* Sequel Card Styling */
+.sequel-card {
+    position: relative;
+    width: 230px;
+    height: auto; /* Fixed height for consistency */
+    border: 1px solid lightpink;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.sequel-card:hover {
+    transform: scale(1.05);
+}
+
+.sequel-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.sequel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* semi-transparent overlay */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.sequel-card:hover .sequel-overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.sequel-info {
+    padding: 10px;
+    text-align: center;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s;
+}
+
+.sequel-ratings {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.sequel-genre {
+    padding: 10px;
+    text-align: center;
+    color: rgb(253, 200, 67);
+    background-color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.release-date {
+    padding: 10px;
+    text-align: center;
+    color: rgb(237, 235, 230);
+    background-color: #333;
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.sequel-description {
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    color: gold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filter-group select,
+.filter-group input {
+    color: rgb(253, 200, 67);
+    width: 100%;
+    background-color: #333;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.filter-button {
+    color: #171717;
+    background-color: goldenrod;
+    padding: 6px;
+    border-radius: 5px;
+    transition: ease 0.3s;
+}
+
+.filter-button:hover {
+    background-color: rgb(255, 149, 0); /* Fixed color issue */
+    color: white;
+    width: 50%;
+}
+
+/* Pagination Styling */
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    color: rgb(180, 134, 48);
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination li a {
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: yellow;
+}
+
+.pagination li a:hover {
+    background-color: #333;
+}
+
+.pagination .active a {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+    .sequels-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+        padding: 8px; /* Reduced padding for smaller screens */
+    }
+
+    .sidebar {
+        width: 200px; /* Adjust width for smaller screens */
+        padding: 16px; /* Reduced padding */
+    }
+
+    .filter-group {
+        margin-bottom: 16px; /* Adjust margin */
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .sequels-container {
+        grid-template-columns: 1fr; /* 1 card per row */
+        gap: 8px; /* Reduced gap between cards */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width on mobile devices */
+        padding: 12px; /* Reduced padding */
+        margin-top: 10px; /* Reduced margin */
+    }
+
+    .sequel-card {
+        width: 100%; /* Full width for sequel cards */
+    }
+
+    .filter-button {
+        width: 100%; /* Full width buttons for better touch support */
+        padding: 12px; /* Increased padding for better touch targets */
+    }
+}

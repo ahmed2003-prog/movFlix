@@ -1,0 +1,43 @@
+.reviews-section {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.reviews-content {
+  margin-top: 30px;
+}
+
+.review-card {
+  background-color: rgba(51, 51, 51, 0.9);
+  padding: 10px;
+  color: ghostwhite;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.rating-class{
+  margin: 15px 15px 15px 0;
+}
+
+.review-input-field{
+  background-color: transparent;
+  color: lightpink;
+  font-size: 0.8em;
+  border-color: transparent;
+  border-radius: 4px;
+  margin: 15px 15px 15px 0;
+  height: 50px;
+}
+
+.review-submit-button{
+  width: 15%;
+  font-size: 0.6em;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+.review-submit-button:hover{
+  background: linear-gradient(to right, #feb47b, #ff7e5f);
+}
+
+.review-card p {
+  margin: 5px 0;
+}

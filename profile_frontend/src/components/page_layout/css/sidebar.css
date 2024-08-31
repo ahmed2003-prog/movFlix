@@ -1,0 +1,106 @@
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 30px;
+    height: 90%;
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+}
+
+.filter-group {
+    margin-bottom: 16px;
+    border-radius: 5px;
+}
+
+.dropdown-genre:hover {
+    cursor: pointer;
+    scrollbar-arrow-color: gold;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#genres option {
+    background-color: transparent;
+}
+
+.selected-genres {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of items to next line if needed */
+    gap: 8px; /* Space between items */
+    margin-bottom: 16px; /* Margin at the bottom of the selected genres container */
+}
+
+.selected-genre {
+    color: rgb(190, 166, 88);
+    width: 30%;
+    padding: 2px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.remove-genre {
+    background: none;
+    border: none;
+    color: #f00a0a;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: -14px;
+}
+
+.remove-genre:hover {
+    background-color: transparent;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px; /* Adjust width for smaller screens */
+        padding: 12px; /* Adjust padding */
+        margin-top: 20px; /* Adjust margin */
+    }
+
+    .selected-genre {
+        width: 45%; /* Adjust width for better fit on smaller screens */
+    }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100%; /* Full width on mobile devices */
+        padding: 8px; /* Reduced padding */
+        margin-top: 10px; /* Reduced margin */
+        height: auto; /* Auto height to accommodate content */
+    }
+
+    .selected-genre {
+        width: 100%; /* Full width for selected genres on mobile */
+        margin-bottom: 8px; /* Adjust margin for better spacing */
+    }
+
+    button {
+        width: 100%; /* Full width buttons for better touch support */
+        padding: 12px; /* Increased padding for better touch targets */
+    }
+}

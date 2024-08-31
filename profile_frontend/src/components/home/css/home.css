@@ -1,0 +1,276 @@
+/* General section styles */
+section {
+    position: relative;
+    padding: 20px;
+    color: white;
+}
+
+.home-movies-list {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(5, 2fr); /* 4 cards per row */
+    justify-content: center;
+    padding: 16px;
+}
+
+
+.marquee-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-content {
+    display: flex;
+    animation: marquee 15s linear infinite;
+    white-space: nowrap;
+}
+
+.home-movie-title {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: pink;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid gold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px; /* Corrected height to match the width for a proper spinner */
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.home-movie-card {
+    position: relative;
+    width: 100%;
+    max-width: 230px;
+    height: auto; /* Adjust height dynamically */
+    border: 1px solid lightpink;
+    border-radius: 4px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.home-movie-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sidebar {
+    width: 100%;
+    max-width: 250px;
+    padding: 20px;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    color: gold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.filter-group select,
+.filter-group input {
+    color: rgb(253, 200, 67);
+    width: 100%;
+    background-color: #333;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.filter-button {
+    color: #171717;
+    background-color: goldenrod;
+    padding: 6px;
+    border-radius: 5px;
+    transition: ease 0.3s;
+}
+
+.filter-button:hover {
+    background-color: rgb(255, 149, 0);
+    color: white;
+    width: 50%;
+}
+
+.home-movie-card:hover {
+    transform: scale(1.05);
+}
+
+.home-movie-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Movie card overlay styles */
+.home-movie-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); 
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.home-movie-card:hover .home-movie-overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.home-movie-genre {
+    text-align: center;
+    width: 100%;
+    color: rgb(253, 200, 67);
+    background-color: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    margin: 5px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.home-movie-info {
+    padding: 10px;
+    text-align: center;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s;
+}
+
+.home-movie-description {
+    margin-top: 10px;
+    font-size: 8px;
+    text-align: center;
+}
+
+/* Pagination styling */
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    color: rgb(180, 134, 48);
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination li {
+    margin: 0 5px;
+}
+
+.pagination li a {
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: yellow;
+}
+
+.pagination li a:hover {
+    background-color: #333;
+}
+
+.pagination .active a {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+}
+
+/* Styling for the expandable section */
+.expandable {
+    max-height: 200px;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+
+.expandable.expanded {
+    max-height: 1000px;
+}
+
+/* Additional styling for the Show More button */
+.show-more {
+    display: block;
+    margin: 5px auto;
+    padding: 10px 20px;
+    background-color: goldenrod;
+    color: #171717;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.show-more:hover {
+    background-color: rgb(255, 149, 0);
+    color: white;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .home-movies-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 cards per row for medium screens */
+    }
+}
+
+@media (max-width: 900px) {
+    .home-movies-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row for smaller screens */
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar takes full width on smaller screens */
+        padding: 10px;
+    }
+
+    .home-movie-card {
+        max-width: 100%; /* Movie cards take full width on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .home-movies-container {
+        grid-template-columns: 1fr; /* 1 card per row for mobile screens */
+    }
+
+    .home-movie-title {
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+
+    .home-movie-info {
+        padding: 5px;
+    }
+
+    .pagination li a {
+        padding: 6px 12px;
+    }
+}

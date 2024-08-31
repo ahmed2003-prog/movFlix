@@ -1,0 +1,49 @@
+/* Footer Styling */
+.footer {
+  position: relative;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.footer .container {
+  padding: 1rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .footer {
+      padding: 0.75rem 0; /* Adjust padding for smaller screens */
+  }
+
+  .footer .container {
+      padding: 0.75rem; /* Adjust container padding */
+  }
+
+  .footer p {
+      font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .footer {
+      padding: 0.5rem 0; /* Further reduced padding */
+  }
+
+  .footer .container {
+      padding: 0.5rem; /* Adjust container padding */
+  }
+
+  .footer p {
+      font-size: 12px; /* Smaller font size for mobile screens */
+  }
+}

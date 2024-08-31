@@ -1,0 +1,165 @@
+/* Profile Page Container */
+.profile-container {
+  color: #f4f4f4;
+  opacity: 0.9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 900px; /* Ensure the container doesn't stretch too wide */
+  margin: 20px auto; /* Center the container */
+}
+
+/* Header Styling */
+.profile-container h2 {
+  color: #ffd700;
+  margin-bottom: 20px;
+  font-size: 24px; /* Increase header size for better visibility */
+}
+
+/* Profile Sections */
+.profile-section {
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.profile-form {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Container */
+.input-container {
+  margin-bottom: 15px;
+}
+
+/* Input and Textarea Styling */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #555;
+  background: #444;
+  color: #fff;
+  font-size: 16px; /* Increase font size for better readability */
+}
+
+/* Input Focus Styling */
+input:focus, textarea:focus {
+  border-color: #ffd700; /* Golden Color */
+  outline: none;
+}
+
+/* Save Button */
+.submit-button {
+  text-align: center;
+  margin-top: 10px; /* Add margin to separate from other elements */
+}
+
+.submit-button button {
+  background-color: #ffd700; /* Golden Color */
+  color: #333; /* Dark Grey Text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px; /* Increase font size for better readability */
+}
+
+.submit-button button:hover {
+  background-color: lightpink;
+  color: darkblue;
+  font-weight: bold;
+}
+
+/* Divider Line */
+hr {
+  border: 1px solid #555;
+  margin: 20px 0; /* Add margin for spacing */
+}
+
+/* DatePicker Custom Styles */
+.react-date-picker {
+  background: transparent; /* Transparent Background */
+  border: 1px solid #555;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+  color: #fff; /* Ensure text color is readable */
+}
+
+.react-date-picker__inputGroup {
+  display: flex;
+  align-items: center;
+}
+
+.react-date-picker__inputGroup input {
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 16px; /* Increase font size for better readability */
+}
+
+.react-calendar {
+  background: #333;
+  border: 1px solid #555;
+  border-radius: 4px;
+}
+
+.react-calendar__month-view__weekdays {
+  background-color: #444;
+}
+
+.react-calendar__tile {
+  padding: 10px;
+  border-radius: 4px;
+  color: #f4f4f4;
+}
+
+.react-calendar__tile--active {
+  background-color: #ffd700;
+  color: #333;
+}
+
+.react-calendar__tile--active:hover {
+  background-color: #e5b700;
+}
+
+.react-calendar__tile:hover {
+  background-color: #555;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .profile-container {
+    padding: 15px; /* Reduced padding for smaller screens */
+  }
+
+  .input-container {
+    margin-bottom: 10px; /* Adjust margin for smaller screens */
+  }
+
+  .submit-button button {
+    width: 100%; /* Full width button for better touch interaction */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .profile-container {
+    padding: 10px; /* Further reduced padding */
+  }
+
+  .input-container {
+    margin-bottom: 8px; /* Further adjust margin */
+  }
+
+  .submit-button button {
+    font-size: 12px; /* Further adjust font size */
+  }
+}

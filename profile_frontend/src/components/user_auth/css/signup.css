@@ -1,0 +1,119 @@
+/* Container for the signup form */
+.signup-container {
+  max-width: 400px;
+  margin: 20px auto; /* Center the container horizontally */
+  padding: 20px;
+  border: 2px solid #222;
+  background-color: #333;
+  color: gold;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+}
+
+/* Styling for the form within the signup container */
+.signup-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input container to hold input field and icon */
+.input-container {
+  position: relative;
+  width: 100%;
+  margin: 10px 0; /* Slightly increased margin for better spacing */
+}
+
+/* Input icon styling */
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 20px;
+}
+
+/* Input fields styling */
+.signup-container input[type="text"],
+.signup-container input[type="password"],
+.signup-container input[type="email"] {
+  width: 100%;
+  padding: 10px 10px 10px 40px; /* Add padding to the left to make space for the icon */
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  background-color: #444; /* Slightly darker background for input fields */
+  color: #fff;
+  border-radius: 4px; /* Optional: Adjust border radius */
+  font-size: 16px; /* Increased font size for better readability */
+}
+
+/* Button styling */
+.signup-container button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: #333;
+  font-weight: 500;
+  border-radius: 4px; /* Slightly rounded corners */
+  border: none;
+  cursor: pointer;
+  align-self: center; /* Center button within form */
+  font-size: 16px; /* Increased font size for better readability */
+}
+
+.signup-container button:hover {
+  background: linear-gradient(to right, #feb47b, #ff7e5f);
+  color: #333; /* Keep text color consistent on hover */
+}
+
+/* Success and error messages */
+.success {
+  color: green;
+  margin-top: 10px;
+  text-align: center; /* Center text alignment */
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  text-align: center; /* Center text alignment */
+}
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and smaller devices */
+@media (max-width: 768px) {
+  .signup-container {
+    padding: 15px; /* Reduced padding for smaller screens */
+    max-width: 100%; /* Full width container on small screens */
+  }
+
+  .signup-container input[type="text"],
+  .signup-container input[type="password"],
+  .signup-container input[type="email"] {
+    padding: 10px 10px 10px 30px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 10px; /* Further reduced padding */
+    max-width: 100%; /* Full width container on mobile screens */
+  }
+
+  .signup-container input[type="text"],
+  .signup-container input[type="password"],
+  .signup-container input[type="email"] {
+    padding: 10px 10px 10px 25px; /* Further adjust padding */
+  }
+
+  .signup-container button {
+    width: 100%; /* Full width button for better touch interaction */
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
